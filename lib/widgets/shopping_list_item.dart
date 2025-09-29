@@ -10,6 +10,7 @@ class ShoppingListItem extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
+      key: ValueKey(groceryItem.id),
       title: Text(groceryItem.name),
       leading: Container(
         width: 24,
