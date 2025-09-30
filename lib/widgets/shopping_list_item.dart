@@ -10,14 +10,18 @@ class ShoppingListItem extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
+      visualDensity: VisualDensity(),
       key: ValueKey(groceryItem.id),
-      title: Text(groceryItem.name),
+      title: Text(groceryItem.name, style: TextStyle(fontSize: 22)),
       leading: Container(
-        width: 24,
-        height: 24,
+        width: 30,
+        height: 30,
         color: groceryItem.category.color,
       ),
-      trailing: Text(groceryItem.quantity.toString()),
+      trailing: Text(
+        groceryItem.quantity.toString(),
+        style: TextStyle(fontSize: 20),
+      ),
     );
     // Padding(
     //   padding: EdgeInsetsGeometry.symmetric(vertical: 10, horizontal: 20),
